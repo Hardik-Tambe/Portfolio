@@ -1,0 +1,174 @@
+:root {
+  --primary-color: #00326F;
+  --second-color: #FFA903;
+  --heading-color: #002A5C;
+  --testimonial-below-color: #979A9F;
+  --testimonial-paragraph-color: #656A7C;
+  --white-color: #ffffff;
+}
+
+/*------- Testimonial -------*/
+.testimonial {
+  padding-top: 185px;
+  background: #F2F7F7;
+}
+
+.section_sub_title,
+.section_title,
+.section_desc {
+  color: var(--second-color);
+}
+
+.testimonial .owl_testimonial1.owl-theme .owl-nav [class*=owl-]:hover {
+  background: var(--primary-color);
+  color: var(--second-color);
+}
+
+.testibox1 {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.testibox1:hover::before {
+  opacity: 0;
+}
+
+.testibox1:hover::after {
+  opacity: 1;
+}
+
+.testibox1 .testibox_inner {
+  position: relative;
+  background: #fff;
+  padding: 30px 25px 40px 45px;
+  border: 1px solid #EEEEEE;
+  transition: all 0.8s ease-in;
+}
+
+.testibox1 .testibox_inner:hover {
+  background: var(--heading-color);
+}
+
+.testibox1 .testibox_inner:hover ul li.text,
+.testibox1 .testibox_inner:hover p,
+.testibox1 .testibox_inner:hover h4 {
+  color: var(--white-color);
+}
+
+.testibox1 .testibox_inner:before {
+  content: url("../Assets/border_radius_shape.png");
+  position: absolute;
+  bottom: -8px;
+  right: 0px;
+  z-index: 2;
+}
+
+.testibox1:before {
+  content: url("../Assets/quote.png");
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  z-index: 2;
+  transition: all 0.8s ease-in;
+}
+
+.testibox1:after {
+  content: url("../Assets/quote2.png");
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.8s ease-in;
+}
+
+.testibox1 .testi-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.testibox1 .testi-img {
+  width: 60px;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.testibox1 h4 {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  color: var(--heading-color);
+  font-size: 15px;
+  line-height: 15px;
+  transition: all 0.9s ease-in;
+}
+
+.testibox1 h6 {
+  font-family: "Mulish", sans-serif;
+  font-size: 11px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--testimonial-below-color);
+  text-transform: uppercase;
+  transition: all 0.9s ease-in;
+}
+
+.testibox1 p {
+  color: var(--testimonial-paragraph-color);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  transition: all 0.9s ease-in;
+}
+
+.testibox1 ul {
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
+.testibox1 ul li {
+  display: inline-block;
+  font-size: 16px;
+  color: var(--second-color);
+}
+
+/* Section Header Styles */
+.section_header {
+  margin-bottom: 45px;
+}
+
+.section_header .shadow_icon {
+  margin-bottom: -30px;
+}
+
+.section_header .section_sub_title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 26px;
+  color: var(--second-color);
+}
+
+.section_header .section_title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+  color: var(--heading-color);
+  letter-spacing: 0px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.section_header .section_desc {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #656a7c;
+  max-width: 530px;
+  margin: 0 auto;
+}

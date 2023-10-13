@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+body{
+    background-color: #00234B;
+}
+
+h1,h4,p,a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.btn{
+    padding: 12px 32px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background: #FFA903 !important;
+    color: #00234B;
+    border: 1px solid #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border: none !important;
+}
+
+.btn-light{
+    background: transparent;
+    color: #fff;
+    border: none !important;
+}
+
+.btn:hover{
+    background: #00234B !important;
+    color: #fff;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: #FFA903 ;
+}
+
+.icon:hover{
+    color: #FFA903 !important;
+}
