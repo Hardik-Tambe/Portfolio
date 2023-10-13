@@ -40,7 +40,7 @@ function Client() {
                 <div className="section_header text-center">
                     <div className="shadow_icon"><img src={shadowIcon} alt="shadowIcon" /></div>
                     <h6 className="section_sub_title">Clients testimonial</h6>
-                    <h1 className="section_title">What my clients say about me</h1>
+                    <h1 className="section_title fontsize">What my clients say about me</h1>
                     <p className="section_desc">Crafting Seamless User Experiences.
                         Elevating Web Design with Precision.</p>
                 </div>
