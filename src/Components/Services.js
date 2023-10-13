@@ -1,10 +1,33 @@
-import React from 'react'
+/* global $ */
+
+import React, { useEffect } from 'react';
+import 'owl.carousel';
 import './ServicesStyles.css'
 import ServicesData from './ServicesData.js'
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 function Services() {
+    useEffect(() => {
+        // Initialize Owl Carousel when the "About" component mounts
+        $('.owl-carousel').owlCarousel({
+          items: 3,
+          loop: true,
+          margin: 10,
+          autoplay: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            650: {
+              items: 2,
+            },
+            850: {
+              items: 3,
+            },
+          },
+        });
+      }, []);
     return (
         <div className="section2 service">
             <div className="container">
