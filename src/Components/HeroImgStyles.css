@@ -37,7 +37,7 @@
 }
 
 .hero .content h1{
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 0.6rem 0 1.5rem;
 }
 
@@ -55,18 +55,19 @@
 
 @media  screen and (max-width: 640px) {
     .hero .content h1{
-        font-size: 3rem;
+        font-size: 1.4rem;
+        padding: 0;
     }
     .hero .content p{
         font-size: 1.4rem;
+        margin-bottom: 0;
     }
     .content{
         margin-top: 50px;
     }
-    .fontSize{
-        font-size: 2rem !important;
-    }
+    
     .content a{
-        padding: 10px 15px !important;
+        font-size: 0.8rem;
+        padding: 5px 10px !important;
     }
 }
