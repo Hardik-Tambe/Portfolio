@@ -11,6 +11,7 @@ const Skills = () => {
 
   return (
     <section className="skills mtop background2"  data-aos="fade-up">
+      <div className="container">
       <div className=" flex">
         <div className="leftt">
           {/* <div className="heading"> */}
@@ -36,7 +37,7 @@ const Skills = () => {
           {/* Line skill bars */}
           <div className="line_content">
             <div className="line flex1">
-              <p className={`mb-0 ${darkMode?"white":"black"}`}>HTML</p>
+              <p className={`mb-0 mt-4 ${darkMode?"white":"black"}`}>HTML</p>
               <div className="bar">
                 <div className="line_bar html"></div>
               </div>
@@ -44,21 +45,21 @@ const Skills = () => {
             </div>
 
             <div className="line">
-              <p className={`mb-0 ${darkMode?"white":"black"}`}>CSS</p>
+              <p className={`mb-0 mt-4 ${darkMode?"white":"black"}`}>CSS</p>
               <div className="bar">
                 <div className="line_bar css"></div>
               </div>
               <h5 className={`${darkMode?"white":"black"}`}>75</h5>
             </div>
             <div className="line">
-              <p className={`mb-0 ${darkMode?"white":"black"}`}>BOOTSTRAP</p>
+              <p className={`mb-0 mt-4 ${darkMode?"white":"black"}`}>BOOTSTRAP</p>
               <div className="bar">
                 <div className="line_bar bootstrap"></div>
               </div>
               <h5 className={`${darkMode?"white":"black"}`}>80</h5>
             </div>
             <div className="line">
-              <p className={`mb-0 ${darkMode?"white":"black"}`}>JAVASCRIPT</p>
+              <p className={`mb-0 mt-4 ${darkMode?"white":"black"}`}>JAVASCRIPT</p>
               <div className="bar">
                 <div className="line_bar photo"></div>
               </div>
@@ -101,6 +102,7 @@ const Skills = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

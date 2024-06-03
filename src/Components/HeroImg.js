@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './HeroImgStyles.css';
 import { ThemeContext } from '../context/ThemeContext';
+import IntroImg from "../Assets/landingImg.png"
 
 const HeroImg = () => {
   const text = 'MERNSTACK Developer'; // Text to animate
@@ -15,10 +16,10 @@ const HeroImg = () => {
         setAnimatedText(text.substring(0, currentIndex + 1));
         currentIndex++;
       } else {
-        currentIndex = 0; // Loop back to the beginning
+        currentIndex = 0; 
         setAnimatedText('');
       }
-    }, 200); // Adjust the interval duration as needed
+    }, 200); 
 
     return () => {
       clearInterval(interval);
@@ -26,14 +27,9 @@ const HeroImg = () => {
   }, []);
 
   return (
+    <div className="container">
     <div className='hero'>
-      <div className='mask'>
-        {/* <img
-          className='into-img'
-          src={IntroImg}
-          alt='IntroImg'
-        /> */}
-      </div>
+     
       <div className='content'>
         <p className={`${darkMode ? "white" : "black"}`}>HI, I'M HARDIK.</p>
         <h1 className='fontSize'>
@@ -45,6 +41,16 @@ const HeroImg = () => {
             RESUME
           </a>
         </div>
+      </div>
+      <div className='mask'>
+        <img
+          className='into-img'
+          src={IntroImg}
+          alt='IntroImg'
+          width="350px"
+          height="350px"
+        />
+      </div>
       </div>
     </div>
   );
