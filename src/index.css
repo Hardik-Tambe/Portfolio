@@ -1,30 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Outfit", sans-serif;
 }
 
-body{
+/* body {
     background-color: #00234B;
-}
+    background-color: #1b1b1b;
 
-h1,h4,p,a{
+} */
+
+h1,
+h4,
+p,
+a {
     text-decoration: none;
-    color: #fff;
+    /* color: #fff; */
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-.btn{
+.btn {
     padding: 12px 32px;
     font-size: 1rem;
     text-transform: uppercase;
-    background: #FFA903 !important;
+    background: #8B68FF !important;
     color: #00234B;
     border: 1px solid #fff;
     font-weight: 600;
@@ -32,22 +37,47 @@ ul{
     border: none !important;
 }
 
-.btn-light{
+.btn-light {
     background: transparent;
     color: #fff;
     border: none !important;
 }
 
-.btn:hover{
-    background: #00234B !important;
-    color: #fff;
+.btn:hover {
+    background: #fff !important;
+    color: #8B68FF;
     transition: 0.3s;
 }
 
-a:hover{
-    color: #FFA903 ;
+a:hover {
+    color: #927dfa;
 }
 
-.icon:hover{
-    color: #FFA903 !important;
+.icon:hover {
+    color: #927dfa !important;
+}
+
+
+.dark-bg {
+    background-image: url("./Assets/dark-bg.png");
+    background-size: cover;
+}
+
+.light-bg {
+    background-image: url("./Assets/light-bg.png");
+    background-size: cover;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.black {
+    color: #000000;
+}
+
+.active {
+    color: #927dfa;
+    font-size: 18px;
+    font-weight: 600;
 }

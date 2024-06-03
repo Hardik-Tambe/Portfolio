@@ -1,6 +1,10 @@
 /* In your CSS file, import owl.carousel styles */
 @import 'owl.carousel/dist/assets/owl.carousel.css';
 
+@font-face {
+  font-family: "koho";
+  src: url("../Assets/fonts/KoHo//KoHo-Bold.ttf") format("truetype");
+}
 
 :root {
     --primary-color: #00326F;
@@ -40,18 +44,22 @@
   }
   
   .service_inner_block {
-    padding: 50px 24px;
+    padding: 20px 15px 50px 15px;
     transition: all 0.5s ease-in-out;
-    box-shadow: 4px 4px 15px 10px rgba(51, 60, 68, 0.05);
+    /* box-shadow: 4px 4px 15px 10px rgba(51, 60, 68, 0.05); */
     border-radius: 10px;
     text-align: center;
     position: relative;
     margin-bottom: 30px;
     margin-top: 25px;
     margin-left: 15px;
-    background-color: #002a5c;
+    /* background-color: #002a5c; */
+    box-shadow: 0px 0px 15px 0px #00000059 inset, 0px 7px 10px 0px #00000040;
+    background: #F0ECEC1A;
   }
-  
+  .darkModeCards {
+    box-shadow: 0px 0px 15px 0px #FFFFFF59 inset, 0px 7px 10px 0px #00000040 !important;
+}
   .service_inner_block > img {
     position: absolute;
     left: 0;
@@ -81,10 +89,10 @@
   }
   
   .service_inner_block .service_content h4 {
-    color: var(--heading-color);
     font-weight: 700;
     margin: 30px 0 15px 0;
     line-height: 26px;
+    font-size: 20px;
     transition: all 0.5s ease-in-out;
   }
   
@@ -93,12 +101,12 @@
     font-weight: 500;
     line-height: 28px;
     margin-bottom: 15px;
-    color: var(--testimonial-paragraph-color);
+    color: #2e2d2d;
     transition: all 0.5s ease-in-out;
   }
   
   .service_inner_block .service_content a {
-    color: var(--white-color);
+    /* color: var(--white-color); */
     font-size: 14px;
     font-weight: 600;
     transition: all 0.5s ease-in-out;
@@ -114,19 +122,19 @@
   }
   
   .service_inner_block:hover::after {
-    background: rgba(0, 42, 92, 0.7);
+    background: #d0c8f7b7;
   }
   
   .service_inner_block:hover .service_content h4 {
-    color: var(--white-color);
+    /* color: var(--white-color); */
   }
   
   .service_inner_block:hover .service_content p {
-    color: #CACFEB;
+    color: #0a0a0a;
   }
   
   .service_inner_block:hover .service_content a {
-    color: var(--white-color);
+    /* color: var(--white-color); */
   }
   
   .service_inner_block:hover .icon_img img {
@@ -157,6 +165,7 @@
     transition: all 0.5s ease-in;
     height: 100%;
     overflow: hidden;
+    
   }
   
   .service_inner .icon_img {
@@ -265,7 +274,29 @@
   .owl_service.owl-carousel.owl-theme .owl-nav .owl-next {
     right: 0px;
   }
-  
+  .darkModeCards .service_content p {
+    color: #B7B0B0 ;
+}
+.getService {
+  box-shadow: 0px 4px 10px 0px #927DFA80;
+  padding: 13px 35px 13px 35px;
+  border-radius: 10px;
+  border: 1px solid #8B68FF;
+  font-family: poppins;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  /* color: #2B2424; */
+  transition: all 0.5s;
+  cursor: pointer;
+  /* box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7); */
+}
+.getService:hover {
+  transition: 1s ease-in-out;
+  background: #6C42F8;
+  border: none;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+  color: #fff;
+}
   @media  screen and (max-width: 768px) {
     .section2.service {
       padding: 80px 0 0px 0;
@@ -306,5 +337,9 @@
     .service_inner_block {
       height: 440px; 
       overflow: hidden; 
+    }
+   .section2 .section_header h5{
+      font-size: 16px;
+      margin-bottom: 0;
     }
   }

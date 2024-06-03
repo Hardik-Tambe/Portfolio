@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './HeroImgStyles.css';
-import IntroImg from '../Assets/intro-bg.jpg';
-import { Link } from 'react-router-dom';
+import { ThemeContext } from '../context/ThemeContext';
 
 const HeroImg = () => {
-  const text = 'React Developer'; // Text to animate
+  const text = 'MERNSTACK Developer'; // Text to animate
   const [animatedText, setAnimatedText] = useState('');
+  const { darkMode } = useContext(ThemeContext);
 
   useEffect(() => {
     let currentIndex = 0;
@@ -28,25 +28,22 @@ const HeroImg = () => {
   return (
     <div className='hero'>
       <div className='mask'>
-        <img
+        {/* <img
           className='into-img'
           src={IntroImg}
           alt='IntroImg'
-        />
+        /> */}
       </div>
       <div className='content'>
-        <p>HI, I'M HARDIK.</p>
+        <p className={`${darkMode ? "white" : "black"}`}>HI, I'M HARDIK.</p>
         <h1 className='fontSize'>
           {animatedText}
           <span className="blinking-cursor">|</span>
         </h1>
         <div>
-          <Link to='/project' className='btn'>
-            Projects
-          </Link>
-          <Link to='/contact' className='btn btn-light'>
-            Contact
-          </Link>
+          <a href="/resume.pdf" download="Hardik_Resume.pdf" className={`btn ${darkMode ? "white" : "black"}`}>
+            RESUME
+          </a>
         </div>
       </div>
     </div>

@@ -1,33 +1,51 @@
+@font-face {
+  font-family: "koho";
+  src: url("../Assets/fonts/KoHo//KoHo-Bold.ttf") format("truetype");
+}
+
 .project-heading{
     text-align: center;
     padding: 4rem 0 2rem 0;
     font-size: 3rem;
     font-weight: 700;
-    color: #FFA903;
+    color: #927dfa;
+    font-family: koho;
+
 }
 
 .project-container{
     max-width: 1140px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
+    padding: 30px;
     padding-bottom: 5rem;
 }
 
 .project-card{
     background: #002a5c;
+    background: hsla(0, 0%, 53%, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
     /* padding: 1.2rem 1rem; */
 }
 
 .project-card img{
     width: 100%;
-    height: 250px;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
 }
 
 .project-title{
-    color: #FFA903;
+    /* color: #927dfa; */
+    text-align: center;
     padding: 1rem 0;
+    font-size: 1.2em;
+    font-family: koho;
 }
 
 .pro-details p{
@@ -46,11 +64,11 @@
     padding: 0.5rem 1rem;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 768px) {
     .project-container{
         max-width: 90%;
         margin: auto;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     .project-card img{
         height: auto;
@@ -58,7 +76,7 @@
 }
 
 .banner .banner_content {
-    background: var(--second-color);
+    background: #927dfa;
     padding: 60px 0px;
   }
   
@@ -81,9 +99,9 @@
     color: var(--white-color);
   }
   
-  .banner .banner_content .banner_text img {
+  /* .banner .banner_content .banner_text img {
     margin-right: 20px;
-  }
+  } */
   
   .banner .banner_content .banner_phone span {
     font-size: 34px;
@@ -106,13 +124,11 @@
   }
   
   .banner.type_3 .banner_content {
-    background: var(--second-color);
     border-radius: 8px;
   }
 
   @media screen and (max-width: 1199px) {
     .banner .banner_content {
-        background: var(--second-color);
         padding: 40px 0px;
       }
       .banner .banner_content .banner_text h1 {
@@ -142,4 +158,24 @@
     margin-top: 20px;
     text-align: center;
   }
+  }
+  @media screen and (max-width: 425px) {
+    .project-container{
+      max-width: 100%;
+      grid-template-columns: 1fr;
+  }
+  .banner .banner_content .banner_text h1 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .banner .banner_content .banner_phone h4 {
+    font-size: 25px;
+    line-height: 30px;
+}
+.banner .banner_content .banner_phone span {
+  font-size: 25px;
+}
+.project-title {
+  font-size: 1em;
+}
   }

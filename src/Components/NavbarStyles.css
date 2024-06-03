@@ -10,7 +10,10 @@
     font-size: 1.2rem;
     font-weight: 500;
 }
+.active{
+    color: #FFA903 ;
 
+}
 .header{
  display: flex;
  justify-content: space-between;
@@ -20,10 +23,14 @@
  width: 100%;
  height: 90px;
  z-index: 10;
+ background: transparent;
 }
 
 .header-bg{
-    background-color: #375891e0;
+    /* background-color: #375891e0; */
+    background: hsla(0, 0%, 100%, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
     transition: 0.5s;
 }
 

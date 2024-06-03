@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "koho";
+    src: url("../Assets/fonts/KoHo//KoHo-Bold.ttf") format("truetype");
+  }
+.experience {
+    padding-top: 5%;
+  }
+  
+  .experience h2 {
+    margin: 0;
+  }
+  
+.center{
+    text-align: center;
+    color: #927dfa;
+}  
+.heading_bottom h1{
+    font-family: koho;
+}
+
+  .timeline {
+    position: relative;
+  }
+  
+  .timeline .content section {
+    width: 100%;
+  }
+  
+  .timeline .line {
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: white;
+    left: 0;
+  }
+  
+  .timeline .icon {
+    position: absolute;
+    background: #ff7e5f;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px !important;
+    box-shadow: 0 0 0 4px white,
+  }
+  
+  .timeline .content:nth-child(5) .icon,
+  .timeline .content:nth-child(3) .icon {
+    background: #927dfa;
+  }
+  
+  .content-1 .icon {
+    position: absolute;
+    left: -30px;
+    top: 0;
+  }
+  
+  .timeline .content section {
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 40px;
+    position: relative;
+  }
+  
+  .timeline span {
+    color: #ff7e5f;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .timeline .content:nth-child(5) span,
+  .timeline .content:nth-child(3) span {
+    color: #927dfa;
+  }
+  
+  .timeline .content {
+    margin-bottom: 20px;
+  }
+  
+  .timeline p {
+    opacity: 0.8;
+  }
+  
+
+  @media only screen and (max-width:768px) {
+  .experience .content {
+    flex-direction: column;
+  }
+
+  .experience .left img {
+    width: 100%;
+  }
+
+  .experience .left, .rightt {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:425px) {
+    .timeline span {
+        font-size: 13px;
+       
+    }
+    .details h3{
+        font-size: 18px;
+    }
+    .timeline p {
+       font-size: 13px;
+    }
+    .timeline .icon {
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      font-size: 20px !important;
+    }
+    .content-1 .icon {
+      position: absolute;
+      left: -20px;
+      top: 0;
+    }
+  }

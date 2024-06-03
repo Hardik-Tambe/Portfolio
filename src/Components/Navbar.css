@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "poppins";
+    src: url("../Assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+.Logo {
+    height: 56px;
+    margin-right: 6.5em;
+    /* color: #927dfa; */
+    background: linear-gradient(90deg, #ff7e5f, #927dfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.font_Size {
+    font-size: 2.5rem;
+}
+
+.navbarBg {
+    /* position: relative; */
+    background: hsla(0, 0%, 100%, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    font-family: poppins;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 28.5px;
+    padding: 0.5em 4em;
+    width: 100%;
+}
+
+.sticky-top {
+    position: fixed;
+    top: 0;
+    z-index: 100000000;
+    /* Adjust z-index as needed */
+}
+
+.navbarBgLight {
+    box-shadow: 0px 4px 23px 0px #0000001A;
+
+}
+
+.navbar-nav .nav-link.active {
+    color: #927dfa !important;
+    /* font-size: 18px; */
+    font-weight: 600;
+}
+
+
+.space {
+    gap: 20px;
+}
+
+.theme {
+    margin-left: 3em;
+    cursor: pointer;
+}
+
+.theme img {
+    margin-right: 5px;
+}
+
+.navTransparent .navbar-toggler-icon {
+    outline: none;
+}
+
+.navTransparent .navbar-toggler:focus {
+    outline: none;
+}
+.nav-link {
+    font-family: poppins;
+}
+
+.nav-link:hover {
+    color: #927dfa !important;
+}
+
+/* .navTransparent .navbar-toggler-icon {
+      background-image: url("../../assets/images/hamburger.png");
+      font-weight: bolder;
+      font-size: larger;
+      border-radius: 5px;
+    } */
+
+@media screen and (max-width: 1080px) {
+    .navbarBg {
+        font-size: 17px;
+        padding: 0 1em;
+    }
+
+    .space {
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 1150px) {
+    .Logo {
+        margin-right: 4em;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .Logo {
+        margin-right: 2em;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .navbarBg {
+        font-size: 17px;
+        padding: 0;
+    }
+
+    .space {
+        gap: 0px;
+    }
+
+    .font_Size {
+        font-size: 2rem;
+    }
+    .theme {
+        margin-left: 0;
+    }
+}

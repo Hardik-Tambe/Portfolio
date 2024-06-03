@@ -1,39 +1,46 @@
 /* global $ */
 
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import 'owl.carousel';
 import './ServicesStyles.css'
 import ServicesData from './ServicesData.js'
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import AOS from "aos";
+import { ThemeContext } from '../context/ThemeContext';
+
 
 function Services() {
+    const { darkMode } = useContext(ThemeContext);
+
     useEffect(() => {
-        // Initialize Owl Carousel when the "About" component mounts
+        AOS.init({ duration: 2000 });
+    }, []);
+    useEffect(() => {
         $('.owl-carousel').owlCarousel({
-          items: 3,
-          loop: true,
-          margin: 10,
-          autoplay: true,
-          responsive: {
-            0: {
-              items: 1,
+            items: 3,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                650: {
+                    items: 2,
+                },
+                850: {
+                    items: 3,
+                },
             },
-            650: {
-              items: 2,
-            },
-            850: {
-              items: 3,
-            },
-          },
         });
-      }, []);
+    }, []);
     return (
-        <div className="section2 service">
-            <div className="container">
+        <div className="section2 service" >
+            <div className="container" data-aos="fade-up">
                 <div className="section_header" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3">
                     <h6 className="section_sub_title text-center fs-1">MY SERVICES</h6>
-                    <h1 className="section_title clr fs-2 text-center">Perfect Services to Build Extraordinary Projects</h1>
+                    <h5 className={` text-center ${darkMode ? "white" : "black"}`}>Perfect Services to Build Extraordinary Projects</h5>
                 </div>
             </div>
             <div className="container_new">
@@ -42,17 +49,16 @@ function Services() {
                         <div className="owl_service owl-carousel owl-theme">
                             {ServicesData.map((value, index) => {
                                 return (
-                                    <div className="item" key={index}>
-                                        <div className="service_inner_block">
+                                    <div className="item" key={index} data-aos="fade-up">
+                                        <div className={`service_inner_block ${darkMode ? "darkModeCards" : ""}`}>
                                             <img src={value.img} alt="" />
                                             <div className="icon_img">
                                                 <img src={value.icon} alt="" />
                                             </div>
                                             <div className="service_content">
-                                                <h4 className='text-white'>{value.heading}</h4>
-                                                <p className='fs-6'>{value.description}</p>
-                                                <Link to={`/service/${value.id}`}>GET SERVICE  <FaArrowRight size={15} color="#FFA903" /></Link>
-
+                                                <h4 className={`  ${darkMode ? "white" : "black"}`}>{value.heading}</h4>
+                                                <p className='fs-6 mb-5'>{value.description}</p>
+                                                <Link to={`/service/${value.id}`} className={` getService ${darkMode ? "white" : "black"}`}>GET SERVICE  <FaArrowRight size={15} color="#5c30ee" /></Link>
                                             </div>
                                         </div>
                                     </div>

@@ -1,34 +1,70 @@
-label{
+label {
     color: #fff;
     margin-bottom: 0.5rem;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     padding: 4rem 1rem;
     margin: auto;
     max-width: 600px;
+    margin-bottom: 5em;
 }
 
-form input, form textarea{
-    margin-bottom: 1rem;
-    padding: 8px 18px;
-    font-size: 1rem;
+form input,
+form textarea {
+    margin-bottom: 1.5rem;
+    padding: 15px 18px;
+    font-size: 1.2rem;
     background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.1);
-    color: #f4f4f4;
+    border: 1px solid #927dfa;
+    border-radius: 10px;
+    outline: none;
+    color: #000;
 }
 
-.error{
+.form input::placeholder,
+textarea::placeholder {
+    font-family: poppins;
+    font-size: 15.25px;
+    font-weight: 600;
+    line-height: 22.88px;
+    letter-spacing: 0.08em;
+    color: #898686;
+}
+
+.error {
     color: red;
     margin-bottom: 1rem;
 }
 
-.btn.bgClr:hover{
-    background-color: #163f6d !important;
+.btn.bgClr {
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
 }
 
-.clr_yellow{
-    color: #FFA903;
+.btn.bgClr:hover {
+    background-color: #fff;
+    color: #927dfa;
+}
+
+.clr_yellow {
+    color: #927dfa;
+}
+
+@media screen and (max-width: 425px) {
+    form input,
+form textarea {
+    margin-bottom: 1rem;
+    padding: 10px 18px;
+    font-size: 1rem;
+}
+.form input::placeholder,
+textarea::placeholder {
+    font-size: 12px;
+    line-height: 18px;
+}
+
 }

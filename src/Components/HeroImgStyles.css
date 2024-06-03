@@ -19,8 +19,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #111631;
-    opacity: 0.8;
+    /* background-color: #111631;
+    background-color: #2a2a2be8;
+    opacity: 0.8; */
 }
 
 .hero{
@@ -39,12 +40,16 @@
 .hero .content h1{
     font-size: 3rem;
     padding: 0.6rem 0 1.5rem;
+    background: linear-gradient(90deg, #ff7e5f, #927dfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero .content p {
     font-size: 1.4rem;
-    font-weight: 200;
+    /* font-weight: 200; */
     text-transform: uppercase;
+    font-family: poppins;
 }
 
 .content .btn {
@@ -52,6 +57,44 @@
     font-weight: bold;
     color: white;
 }
+
+.content .btn {
+    border-radius: 4px;
+    background-color: #5ca1e1;
+    border: none;
+    color: #fff;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  }
+  
+  .content .btn{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .content .btn:after {
+    content: '»';
+    font-size: 20px;
+    position: absolute;
+    opacity: 0;  
+    top: 8px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .content .btn:hover{
+    padding-right: 30px;
+    /* padding-left:15px; */
+  }
+  
+  .content .btn:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
 
 @media  screen and (max-width: 640px) {
     .hero .content h1{

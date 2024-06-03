@@ -72,15 +72,15 @@ const Form = () => {
   }
 
   return (
-    <div className='container'>
-      <h1 className='text-center fs-1 mt-5 clr_yellow'>Want To Ask Anything? Just Mail Me Anytime</h1>
+    <div className='container' id='contact'>
+      <h1 className='text-center mt-5 clr_yellow'>Want To Ask Anything? Just Mail Me Anytime</h1>
     <div className='form'>
       <form
         action="https://formspree.io/f/moqoyege"
         method="POST"
         onSubmit={handleSubmit}
       >
-        <label>Your Name</label>
+        {/* <label>Your Name</label> */}
         <input
           type='text'
           name='name'
@@ -90,7 +90,7 @@ const Form = () => {
         />
         {error.nameError && <div className='error'>{error.nameError}*</div>}
 
-        <label>Email</label>
+        {/* <label>Email</label> */}
         <input
           type='email'
           name='email'
@@ -100,7 +100,7 @@ const Form = () => {
         />
         {error.emailError && <div className='error'>{error.emailError}*</div>}
 
-        <label>Subject</label>
+        {/* <label>Subject</label> */}
         <input
           type='text'
           name='subject'
@@ -110,9 +110,9 @@ const Form = () => {
         />
         {error.subError && <div className='error'>{error.subError}*</div>}
 
-        <label>Message</label>
+        {/* <label>Message</label> */}
         <textarea
-          rows="6"
+          rows="3"
           name='message'
           placeholder='Type your message here*'
           onChange={(e) => handleChange(e)}
