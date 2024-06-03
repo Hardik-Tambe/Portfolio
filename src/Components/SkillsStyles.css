@@ -288,7 +288,7 @@ circle p {
     flex-wrap: wrap;
   }
   .leftt, .rightt {
-    padding: 0px 15px 30px 15px;
+    padding: 0px 10px 30px 10px;
 }
 .leftt .text p{
   font-size: 15px;

@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import './SkillsStyles.css';
 import { ThemeContext } from '../context/ThemeContext';
 import Aos from 'aos';
+import { Link as ScrollLink} from 'react-scroll';
+
 
 const Skills = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -29,7 +31,16 @@ const Skills = () => {
           <div className="text">
             <h3 className={`${darkMode?"white":"black"}`}>Every Day is a New Challenge</h3>
             <p className={`${darkMode?"white":"black"}`}>In the fast-paced world of technology, I thrive on tackling new challenges and learning from each experience. Each day presents an opportunity to push the boundaries of my knowledge and skills. Whether it's solving complex problems, or collaborating with diverse teams, I embrace every challenge with enthusiasm and determination.</p>
-            <button className={`glow-on-hover ${darkMode?"glow-on-hover-dark":""}`} type="button">Hire Me</button>
+            <ScrollLink
+                  to="contact"
+                  smooth={true}
+                  duration={1000}
+                  // className={`nav-link ${darkMode ? 'white poppinsLight' : 'black'} ${activeSection === 'contact' ? 'active' : ''}`}
+                  // onClick={() => handleSetActive('contact')}
+                >
+                  <button className={`glow-on-hover ${darkMode?"glow-on-hover-dark":""}`} type="button">Hire Me</button>
+                </ScrollLink>
+            
           </div>
         </div>
 

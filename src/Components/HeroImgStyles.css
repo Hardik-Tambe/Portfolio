@@ -28,6 +28,7 @@
 }
 
 .hero .content h1 {
+    font-family: koho;
     font-size: 3rem;
     padding: 0.6rem 0 1.5rem;
     background: linear-gradient(90deg, #ff7e5f, #927dfa);
@@ -99,18 +100,18 @@
 }
 @media screen and (max-width: 640px) {
     .hero .content h1 {
-        font-size: 1.4rem;
+        font-size: 1.9rem;
         padding: 0;
     }
 
     .hero .content p {
-        font-size: 1.4rem;
+        /* font-size: 1.4rem; */
         margin-bottom: 0;
     }
 
     .content a {
-        font-size: 0.8rem;
-        padding: 5px 10px !important;
+        font-size: 1rem;
+        padding: 7px 20px !important;
     }
 }
 @media screen and (max-width: 425px) {
@@ -118,7 +119,12 @@
     .into-img {
         width: 250px;
     }
-    .hero .content p {
-        font-size: 1rem;
+   
+}
+@media screen and (max-width: 375px) {
+
+    .hero .content h1 {
+        font-size: 1.6rem;
     }
+   
 }
