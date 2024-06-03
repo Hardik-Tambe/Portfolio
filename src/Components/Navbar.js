@@ -8,7 +8,7 @@ import { ThemeContext } from '../context/ThemeContext';
 
 const Navbar = () => {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState('home');
 
  
 
