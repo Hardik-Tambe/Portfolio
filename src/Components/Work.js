@@ -5,10 +5,15 @@ import WorkCard from './WorkCard';
 import WorkCardData from './WorkCardData';
 import CustomModal from './CustomModal';
 import Phone3 from '../Assets/phone3.png';
+import Aos from 'aos';
 
 const Work = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+}, []);
 
   useEffect(() => {
     if (showModal) {
@@ -29,7 +34,7 @@ const Work = () => {
   };
 
   return (
-    <div className='work-container'>
+    <div className='work-container' data-aos="fade-up">
       <h1 className='project-heading fs-1'>PROJECTS</h1>
       <div className='project-container'>
         {WorkCardData.map((value, i) => {

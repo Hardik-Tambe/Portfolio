@@ -16,17 +16,10 @@ const Skills = () => {
       <div className="container">
       <div className=" flex">
         <div className="leftt">
-          {/* <div className="heading"> */}
-            {/* <div className="heading_top flex">
-              <div className="line"></div>
-              <div className="line line2"></div>
-              <i className="fas fa-circle"></i>
-              <h3>Expertise</h3>
-            </div> */}
+          
             <div className="heading_bottom">
               <h1 className='skillsTitle'>My Skills</h1>
             </div>
-          {/* </div> */}
 
           <div className="text">
             <h3 className={`${darkMode?"white":"black"}`}>Every Day is a New Challenge</h3>
@@ -35,8 +28,6 @@ const Skills = () => {
                   to="contact"
                   smooth={true}
                   duration={1000}
-                  // className={`nav-link ${darkMode ? 'white poppinsLight' : 'black'} ${activeSection === 'contact' ? 'active' : ''}`}
-                  // onClick={() => handleSetActive('contact')}
                 >
                   <button className={`glow-on-hover ${darkMode?"glow-on-hover-dark":""}`} type="button">Hire Me</button>
                 </ScrollLink>

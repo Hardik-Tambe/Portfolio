@@ -12,7 +12,7 @@ const WorkCard = (props) => {
   }, []);
 
   return (
-    <div className='project-card' onClick={props.onClick}>
+    <div className='project-card' onClick={props.onClick} data-aos={props.aos}>
       <img src={props.imgsrc} alt='pro1' />
       <div className='px-3'>
         <h2 className={`project-title ${darkMode?"white":"black"}`}>{props.title}</h2>

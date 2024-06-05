@@ -15,12 +15,19 @@ import teamMember5 from "../Assets/27767.jpg";
 import teamMember6 from "../Assets/21959.jpg";
 import teamMember7 from "../Assets/45631.jpg";
 import teamMember8 from "../Assets/executive-business-woman-office.jpg";
+import { useEffect } from 'react';
+import Aos from 'aos';
 
 
 
 function Client() {
     const { darkMode } = useContext(ThemeContext);
     const [hoveredMember, setHoveredMember] = useState(2);
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
     const handleMouseEnter = (id) => {
         setHoveredMember(id);
     };
@@ -32,11 +39,11 @@ function Client() {
 
     return (
 
-        <div className="testimonial pd_btom_80">
+        <div className="testimonial pd_btom_80" data-aos="fade-up">
             <div className="container">
                 <div className="section_header text-center">
                     <div className="shadow_icon"><img src={shadowIcon} alt="shadowIcon" /></div>
-                    <h6 className="section_sub_title">Clients testimonial</h6>
+                    <h6 className="section_sub_title" >Clients testimonial</h6>
                     <h1 className="section_title fontsize">What my clients say about me</h1>
                     <p className="section_desc">Crafting Seamless User Experiences.
                         Elevating Web Design with Precision.</p>
@@ -44,7 +51,7 @@ function Client() {
 
 
 
-                <div className="ourTeamContainer">
+                <div className="ourTeamContainer" data-aos="fade-up">
 
                     <div className="teamTopImagesFlex">
                         <div className="teamMember firstMember">

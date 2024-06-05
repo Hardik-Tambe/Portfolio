@@ -8,7 +8,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import AOS from "aos";
 import { ThemeContext } from '../context/ThemeContext';
-import { Link as ScrollLink} from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 
 
@@ -61,11 +61,11 @@ function Services() {
                                                 <h4 className={`  ${darkMode ? "white" : "black"}`}>{value.heading}</h4>
                                                 <p className=' mb-5'>{value.description}</p>
                                                 <ScrollLink
-                  to="contact"
-                  smooth={true}
-                  duration={1000}
-                >
-                                                <Link to={`/service/${value.id}`} className={` getService ${darkMode ? "white" : "black"}`}>GET SERVICE  <FaArrowRight size={15} color="#5c30ee" /></Link>
+                                                    to="contact"
+                                                    smooth={true}
+                                                    duration={1000}
+                                                >
+                                                    <Link to={`/service/${value.id}`} className={` getService ${darkMode ? "white" : "black"}`}>GET SERVICE  <FaArrowRight size={15} color="#5c30ee" /></Link>
                                                 </ScrollLink>
                                             </div>
                                         </div>

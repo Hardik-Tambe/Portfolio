@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import './FormStyles.css';
 import React, { useState } from 'react';
+import Aos from 'aos';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +16,10 @@ const Form = () => {
     subError: '',
     msgError: '',
   });
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+}, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -72,7 +78,7 @@ const Form = () => {
   }
 
   return (
-    <div className='container' id='contact'>
+    <div className='container' id='contact' data-aos="fade-up">
       <h1 className='text-center mt-5 clr_yellow'>Want To Ask Anything? Just Mail Me Anytime</h1>
     <div className='form'>
       <form
