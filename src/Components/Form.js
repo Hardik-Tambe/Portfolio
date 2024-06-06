@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './FormStyles.css';
-import React, { useState } from 'react';
 import Aos from 'aos';
+import { toast } from 'react-toastify';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ const Form = () => {
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
-}, []);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -45,8 +45,6 @@ const Form = () => {
     setError(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      // Form is valid, you can submit the data or take further action here
-      console.log('Form data submitted:', formData);
       fetch('https://formspree.io/f/moqoyege', {
         method: 'POST',
         body: JSON.stringify(formData),
@@ -57,8 +55,6 @@ const Form = () => {
       })
         .then(response => response.json())
         .then(data => {
-          console.log('Formspree response:', data);
-
           // Clear the form data on successful submission
           setFormData({
             name: '',
@@ -66,69 +62,66 @@ const Form = () => {
             subject: '',
             message: '',
           });
-
-          alert('Form submitted successfully!');
-          // Optionally, you can provide feedback to the user, e.g., "Thank you for your submission."
+          toast.success('Form submitted successfully!');
         })
         .catch(error => {
           console.error('Error sending data to Formspree:', error);
-          // Handle the error, e.g., show an error message to the user
+          toast.error('Error submitting the form. Please try again.');
         });
+    } else {
+      toast.error('Please fill in all required fields.');
     }
   }
 
   return (
     <div className='container' id='contact' data-aos="fade-up">
       <h1 className='text-center mt-5 clr_yellow'>Want To Ask Anything? Just Mail Me Anytime</h1>
-    <div className='form'>
-      <form
-        action="https://formspree.io/f/moqoyege"
-        method="POST"
-        onSubmit={handleSubmit}
-      >
-        {/* <label>Your Name</label> */}
-        <input
-          type='text'
-          name='name'
-          placeholder='Enter your name*'
-          onChange={(e) => handleChange(e)}
-          value={formData.name} // Add value attribute to reflect the data
-        />
-        {error.nameError && <div className='error'>{error.nameError}*</div>}
+      <div className='form'>
+        <form
+          action="https://formspree.io/f/moqoyege"
+          method="POST"
+          onSubmit={handleSubmit}
+        >
+          <input
+            type='text'
+            name='name'
+            placeholder='Enter your name*'
+            onChange={(e) => handleChange(e)}
+            value={formData.name} 
+          />
+          {error.nameError && <div className='error'>{error.nameError}*</div>}
 
-        {/* <label>Email</label> */}
-        <input
-          type='email'
-          name='email'
-          placeholder='Enter your email*'
-          onChange={(e) => handleChange(e)}
-          value={formData.email} // Add value attribute to reflect the data
-        />
-        {error.emailError && <div className='error'>{error.emailError}*</div>}
+          <input
+            type='email'
+            name='email'
+            placeholder='Enter your email*'
+            onChange={(e) => handleChange(e)}
+            value={formData.email} 
+          />
+          {error.emailError && <div className='error'>{error.emailError}*</div>}
 
-        {/* <label>Subject</label> */}
-        <input
-          type='text'
-          name='subject'
-          placeholder='Enter subject*'
-          onChange={(e) => handleChange(e)}
-          value={formData.subject} // Add value attribute to reflect the data
-        />
-        {error.subError && <div className='error'>{error.subError}*</div>}
+          <input
+            type='text'
+            name='subject'
+            placeholder='Enter subject*'
+            onChange={(e) => handleChange(e)}
+            value={formData.subject} 
+          />
+          {error.subError && <div className='error'>{error.subError}*</div>}
 
-        {/* <label>Message</label> */}
-        <textarea
-          rows="3"
-          name='message'
-          placeholder='Type your message here*'
-          onChange={(e) => handleChange(e)}
-          value={formData.message} // Add value attribute to reflect the data
-        />
-        {error.msgError && <div className='error'>{error.msgError}*</div>}
+          <textarea
+            rows="3"
+            name='message'
+            placeholder='Type your message here*'
+            onChange={(e) => handleChange(e)}
+            value={formData.message} 
+          />
+          {error.msgError && <div className='error'>{error.msgError}*</div>}
 
-        <button className='btn bgClr' type="submit">Send Mail</button>
-      </form>
-    </div>
+          <button className='btn bgClr' type="submit">Send Mail</button>
+        </form>
+      </div>
+      
     </div>
   );
 }

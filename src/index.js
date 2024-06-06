@@ -7,6 +7,8 @@ import './index.css';
 import 'aos/dist/aos.css';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import Loader from './Components/Loader';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const RootComponent = () => {
   const [loading, setLoading] = useState(true);
@@ -27,6 +29,20 @@ const RootComponent = () => {
         <BrowserRouter>
           <ThemeProvider>
             <App />
+            <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+                bodyClassName="toastBody"
+                className="toastBody"
+              />{" "}
           </ThemeProvider>
         </BrowserRouter>
       )}
